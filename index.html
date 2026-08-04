@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livesk.in - Digital Apps & Websites Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .card-tag {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag-app { background: #dbeafe; color: #1e40af; }
+        .tag-web { background: #dcfce7; color: #15803d; }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Pages Content Section */
+        .page-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            display: none; /* JavaScript से स्विच होगा */
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .page-content h2 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .page-content p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Livesk.in</div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showPage('home')">होम</a></li>
+                <li><a href="#about" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+
+        <!-- HOME SECTION (Apps & Websites List) -->
+        <div id="home" class="page-content active">
+            <h2 class="section-title">हमारे ऐप्स और वेबसाइट्स</h2>
+            <div class="grid">
+
+                <!-- Bihar School Book App -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-app">Mobile App</span>
+                        <h3>Bihar School Book App</h3>
+                        <p>बिहार बोर्ड के छात्रों के लिए स्टडी मटेरियल और बुक्स का कलेक्शन।</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps" target="_blank" class="btn">Play Store पर देखें</a>
+                </div>
+
+                <!-- Ballia Live App -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-app">Mobile App</span>
+                        <h3>Ballia Live App</h3>
+                        <p>बलिया की ताज़ा ख़बरों और अपडेट्स के लिए एंड्रॉइड ऐप।</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps" target="_blank" class="btn">Play Store पर देखें</a>
+                </div>
+
+                <!-- Data Mastery -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-web">Website</span>
+                        <h3>Data Mastery</h3>
+                        <p>डेटा एनालिसिस, स्किल्स और टेक नॉलेज के लिए ऑनलाइन प्लेटफ़ॉर्म।</p>
+                    </div>
+                    <a href="https://datamastery.in" target="_blank" class="btn">वेबसाइट खोलें</a>
+                </div>
+
+                <!-- Apps Livesk -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-web">Subdomain</span>
+                        <h3>Apps Livesk</h3>
+                        <p>हमारे सभी वेब-बेस्ड टूल्स और एप्लिकेशन हब।</p>
+                    </div>
+                    <a href="https://apps.livesk.in" target="_blank" class="btn">वेबसाइट खोलें</a>
+                </div>
+
+                <!-- Ballia Post -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-web">News Web</span>
+                        <h3>Ballia Post</h3>
+                        <p>बलिया और आसपास के क्षेत्रों के लिए प्रमुख डिजिटल न्यूज़ पोर्टल।</p>
+                    </div>
+                    <a href="https://balliapost.com" target="_blank" class="btn">वेबसाइट खोलें</a>
+                </div>
+
+                <!-- Akhand Bharat Samachar -->
+                <div class="card">
+                    <div>
+                        <span class="card-tag tag-web">News Web</span>
+                        <h3>Akhand Bharat Samachar</h3>
+                        <p>राष्ट्रीय और अंतर्राष्ट्रीय समाचारों का एक विश्वसनीय स्रोत।</p>
+                    </div>
+                    <a href="https://akhandbharatsamachar.com" target="_blank" class="btn">वेबसाइट खोलें</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ABOUT US PAGE -->
+        <div id="about" class="page-content">
+            <h2>About Us</h2>
+            <p><strong>Livesk.in</strong> में आपका स्वागत है। हम मोबाइल ऐप्स और वेबसाइट्स का विकास करने वाली एक प्रमुख डिजिटल कंपनी हैं।</p>
+            <p>हमारा उद्देश्य यूज़र्स को बेहतरीन डिजिटल अनुभव, शिक्षा सामग्री और सही समय पर सटीक समाचार पहुँचाना है।</p>
+        </div>
+
+        <!-- PRIVACY POLICY PAGE -->
+        <div id="privacy" class="page-content">
+            <h2>Privacy Policy</h2>
+            <p>Livesk.in ("हम", "हमारा") आपकी गोपनीयता का सम्मान करता है। यह नीति बताती है कि जब आप हमारी वेबसाइट और एप्लिकेशन्स का उपयोग करते हैं तो हम आपकी जानकारी कैसे एकत्र और सुरक्षित करते हैं।</p>
+            <p>हम कोई भी व्यक्तिगत पहचान योग्य जानकारी बिना आपकी सहमति के किसी तीसरे पक्ष (Third Party) के साथ साझा नहीं करते हैं। हमारे ऐप्स Google Play Store की नीतियों का पूर्णतः पालन करते हैं।</p>
+        </div>
+
+        <!-- DISCLAIMER PAGE -->
+        <div id="disclaimer" class="page-content">
+            <h2>Disclaimer</h2>
+            <p>Livesk.in पर दी गई सभी जानकारी केवल सामान्य सूचनात्मक और शैक्षणिक उद्देश्यों के लिए है।</p>
+            <p>यद्यपि हम सही और सटीक जानकारी देने का पूरा प्रयास करते हैं, फिर भी हम जानकारी की पूर्णता या सटीकता की कोई गारंटी नहीं देते हैं। हमारी वेबसाइट पर दिए गए बाहरी लिंक्स के कंटेंट की ज़िम्मेदारी हमारी नहीं होगी।</p>
+        </div>
+
+        <!-- CONTACT US PAGE -->
+        <div id="contact" class="page-content">
+            <h2>Contact Us</h2>
+            <p>यदि आपके पास हमारे ऐप्स, वेबसाइट या सेवाओं के संबंध में कोई प्रश्न या सुझाव हैं, तो आप बेझिझक हमसे संपर्क कर सकते हैं:</p>
+            <p><strong>Email ID:</strong> <a href="mailto:aworlditsolution@gmail.com">aworlditsolution@gmail.com</a></p>
+            <p><strong>Website:</strong> Livesk.in</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Livesk.in</h4>
+                <p style="color: #94a3b8; font-size: 0.9rem;">Building digital solutions for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#about" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal Pages</h4>
+                <ul>
+                    <li><a href="#privacy" onclick="showPage('privacy')">Privacy Policy</a></li>
+                    <li><a href="#disclaimer" onclick="showPage('disclaimer')">Disclaimer</a></li>
+                    <li><a href="/ads.txt" target="_blank">ads.txt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Livesk.in - All Rights Reserved. Contact: aworlditsolution@gmail.com
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Page Switching -->
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            const selectedPage = document.getElementById(pageId);
+            if(selectedPage) {
+                selectedPage.classList.add('active');
+            }
+
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
