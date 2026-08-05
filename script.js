@@ -77,12 +77,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAS3tSQK_QUUo0eQUlb5Arm6La5kvSSZes",
+  authDomain: "livesk.firebaseapp.com",
+  projectId: "livesk",
+  storageBucket: "livesk.firebasestorage.app",
+  messagingSenderId: "167314893077",
+  appId: "1:167314893077:web:544bb165b78cd4e517e11c",
+  measurementId: "G-G0PPH2Y43N"
 };
 
 // Initialize Firebase & Firestore
