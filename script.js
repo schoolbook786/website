@@ -4,13 +4,13 @@ import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.g
 
 // 2. Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAS3tSQK_QUUo0eQUlb5Arm6La5kvSSZes",
-  authDomain: "livesk.firebaseapp.com",
-  projectId: "livesk",
-  storageBucket: "livesk.firebasestorage.app",
-  messagingSenderId: "167314893077",
-  appId: "1:167314893077:web:544bb165b78cd4e517e11c",
-  measurementId: "G-G0PPH2Y43N"
+  apiKey: "AIzaSyDXhYxABCftsf0rWUMxmr547MW59SmBIQs",
+  authDomain: "livesk1.firebaseapp.com",
+  projectId: "livesk1",
+  storageBucket: "livesk1.firebasestorage.app",
+  messagingSenderId: "604215093301",
+  appId: "1:604215093301:web:dce97642bcab21f01da97c",
+  measurementId: "G-7LM168G57M"
 };
 
 // Initialize Firebase & Firestore
