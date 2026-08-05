@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin-dashboard.html
+Sitemap: https://livesk.in/sitemap.xml

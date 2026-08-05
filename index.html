@@ -1,385 +1,199 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livesk.in - Digital Apps & Websites Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --text-muted: #64748b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Header / Navbar */
-        header {
-            background: var(--card-bg);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-color);
-        }
-
-        /* Cards Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-        }
-
-        .card-tag {
-            align-self: flex-start;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .tag-app { background: #dbeafe; color: #1e40af; }
-        .tag-web { background: #dcfce7; color: #15803d; }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            text-align: center;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--secondary-color);
-        }
-
-        /* Pages Content Section */
-        .page-content {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
-            display: none; /* JavaScript से स्विच होगा */
-        }
-
-        .page-content.active {
-            display: block;
-        }
-
-        .page-content h2 {
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-
-        .page-content p {
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: white;
-            padding: 3rem 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Professional Web & App Studio | LiveSK.in</title>
+    <meta name="description" content="LiveSK.in offers Blogger website development and Android apps.">
+    <link rel="canonical" href="https://livesk.in/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo">Livesk.in</div>
-            <ul class="nav-links">
-                <li><a href="#home" onclick="showPage('home')">होम</a></li>
-                <li><a href="#about" onclick="showPage('about')">About Us</a></li>
-                <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content Container -->
-    <div class="container">
-
-        <!-- HOME SECTION (Apps & Websites List) -->
-        <div id="home" class="page-content active">
-            <h2 class="section-title">हमारे ऐप्स और वेबसाइट्स</h2>
-            <div class="grid">
-
-                <!-- Bihar School Book App -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-app">Mobile App</span>
-                        <h3>Bihar School Book App</h3>
-                        <p>बिहार बोर्ड के छात्रों के लिए स्टडी मटेरियल और बुक्स का कलेक्शन।</p>
-                    </div>
-                    <a href="https://play.google.com/store/apps" target="_blank" class="btn">Play Store पर देखें</a>
-                </div>
-
-                <!-- Ballia Live App -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-app">Mobile App</span>
-                        <h3>Ballia Live App</h3>
-                        <p>बलिया की ताज़ा ख़बरों और अपडेट्स के लिए एंड्रॉइड ऐप।</p>
-                    </div>
-                    <a href="https://play.google.com/store/apps" target="_blank" class="btn">Play Store पर देखें</a>
-                </div>
-
-                <!-- Data Mastery -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-web">Website</span>
-                        <h3>Data Mastery</h3>
-                        <p>डेटा एनालिसिस, स्किल्स और टेक नॉलेज के लिए ऑनलाइन प्लेटफ़ॉर्म।</p>
-                    </div>
-                    <a href="https://datamastery.in" target="_blank" class="btn">वेबसाइट खोलें</a>
-                </div>
-
-                <!-- Apps Livesk -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-web">Subdomain</span>
-                        <h3>Apps Livesk</h3>
-                        <p>हमारे सभी वेब-बेस्ड टूल्स और एप्लिकेशन हब।</p>
-                    </div>
-                    <a href="https://apps.livesk.in" target="_blank" class="btn">वेबसाइट खोलें</a>
-                </div>
-
-                <!-- Ballia Post -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-web">News Web</span>
-                        <h3>Ballia Post</h3>
-                        <p>बलिया और आसपास के क्षेत्रों के लिए प्रमुख डिजिटल न्यूज़ पोर्टल।</p>
-                    </div>
-                    <a href="https://balliapost.com" target="_blank" class="btn">वेबसाइट खोलें</a>
-                </div>
-
-                <!-- Akhand Bharat Samachar -->
-                <div class="card">
-                    <div>
-                        <span class="card-tag tag-web">News Web</span>
-                        <h3>Akhand Bharat Samachar</h3>
-                        <p>राष्ट्रीय और अंतर्राष्ट्रीय समाचारों का एक विश्वसनीय स्रोत।</p>
-                    </div>
-                    <a href="https://akhandbharatsamachar.com" target="_blank" class="btn">वेबसाइट खोलें</a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ABOUT US PAGE -->
-        <div id="about" class="page-content">
-            <h2>About Us</h2>
-            <p><strong>Livesk.in</strong> में आपका स्वागत है। हम मोबाइल ऐप्स और वेबसाइट्स का विकास करने वाली एक प्रमुख डिजिटल कंपनी हैं।</p>
-            <p>हमारा उद्देश्य यूज़र्स को बेहतरीन डिजिटल अनुभव, शिक्षा सामग्री और सही समय पर सटीक समाचार पहुँचाना है।</p>
-        </div>
-
-        <!-- PRIVACY POLICY PAGE -->
-        <div id="privacy" class="page-content">
-            <h2>Privacy Policy</h2>
-            <p>Livesk.in ("हम", "हमारा") आपकी गोपनीयता का सम्मान करता है। यह नीति बताती है कि जब आप हमारी वेबसाइट और एप्लिकेशन्स का उपयोग करते हैं तो हम आपकी जानकारी कैसे एकत्र और सुरक्षित करते हैं।</p>
-            <p>हम कोई भी व्यक्तिगत पहचान योग्य जानकारी बिना आपकी सहमति के किसी तीसरे पक्ष (Third Party) के साथ साझा नहीं करते हैं। हमारे ऐप्स Google Play Store की नीतियों का पूर्णतः पालन करते हैं।</p>
-        </div>
-
-        <!-- DISCLAIMER PAGE -->
-        <div id="disclaimer" class="page-content">
-            <h2>Disclaimer</h2>
-            <p>Livesk.in पर दी गई सभी जानकारी केवल सामान्य सूचनात्मक और शैक्षणिक उद्देश्यों के लिए है।</p>
-            <p>यद्यपि हम सही और सटीक जानकारी देने का पूरा प्रयास करते हैं, फिर भी हम जानकारी की पूर्णता या सटीकता की कोई गारंटी नहीं देते हैं। हमारी वेबसाइट पर दिए गए बाहरी लिंक्स के कंटेंट की ज़िम्मेदारी हमारी नहीं होगी।</p>
-        </div>
-
-        <!-- CONTACT US PAGE -->
-        <div id="contact" class="page-content">
-            <h2>Contact Us</h2>
-            <p>यदि आपके पास हमारे ऐप्स, वेबसाइट या सेवाओं के संबंध में कोई प्रश्न या सुझाव हैं, तो आप बेझिझक हमसे संपर्क कर सकते हैं:</p>
-            <p><strong>Email ID:</strong> <a href="mailto:aworlditsolution@gmail.com">aworlditsolution@gmail.com</a></p>
-            <p><strong>Website:</strong> Livesk.in</p>
-        </div>
-
+    
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">LiveSK<span>.in</span></a>
+        <div class="mobile-menu-btn" id="mobileMenuBtn" style="display:none;"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html" class="">About</a></li>
+            <li><a href="services.html" class="">Services</a></li>
+            <li><a href="portfolio.html" class="">Portfolio</a></li>
+            <li><a href="pricing.html" class="">Pricing</a></li>
+            <li class="dropdown">
+                <a href="#">Legal <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="btn btn-primary" style="padding:8px 20px;">Contact</a></li>
+        </ul>
     </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h4>Livesk.in</h4>
-                <p style="color: #94a3b8; font-size: 0.9rem;">Building digital solutions for everyone.</p>
+    
+<section style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color:#FFF; padding: 160px 0 100px; position:relative;">
+    <div class="container hero-grid" style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:40px; align-items:center;">
+        <div>
+            <span class="badge badge-popular" style="background:rgba(37,99,235,0.2); color:#60A5FA;">Modern Web & App Studio</span>
+            <h1 class="hero-title" style="font-size:3rem; margin: 15px 0 20px; color:#FFF;">Professional Blogger Website & <span style="color:var(--secondary)">Android App Development</span></h1>
+            <p style="font-size:1.15rem; color:#94A3B8; margin-bottom:30px;">News Websites, Business Websites, Custom Android Apps, and Firebase Firestore Solutions built for speed, SEO, and conversions.</p>
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Get Started</a>
+                <a href="portfolio.html" class="btn btn-outline"><i class="fa-solid fa-eye"></i> View Portfolio</a>
+                <a href="https://wa.me/910000000000" target="_blank" class="btn btn-accent"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
-            <div class="footer-section">
+        </div>
+        <div>
+            <div class="glass-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color:#FFF;">
+                <h3 style="color:#FFF; margin-bottom:15px;"><i class="fa-solid fa-bolt" style="color:var(--accent)"></i> Why LiveSK.in?</h3>
+                <ul style="list-style:none;">
+                    <li style="margin-bottom:12px;"><i class="fa-solid fa-check-circle" style="color:var(--success)"></i> 100% Google Blogger Hosting Ready</li>
+                    <li style="margin-bottom:12px;"><i class="fa-solid fa-check-circle" style="color:var(--success)"></i> Real-time Firebase Firestore Backend</li>
+                    <li style="margin-bottom:12px;"><i class="fa-solid fa-check-circle" style="color:var(--success)"></i> Native Android PDF & Book Readers</li>
+                    <li style="margin-bottom:12px;"><i class="fa-solid fa-check-circle" style="color:var(--success)"></i> Lighthouse Performance Target 95+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats-section" style="padding: 60px 0; background:#1E293B; color:#FFF;">
+    <div class="container" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; text-align:center;" class="grid-4">
+        <div>
+            <h2 style="font-size:2.8rem; color:var(--accent);"><span class="counter-val" data-target="100">0</span>+</h2>
+            <p style="color:#94A3B8;">Projects Completed</p>
+        </div>
+        <div>
+            <h2 style="font-size:2.8rem; color:var(--secondary);"><span class="counter-val" data-target="50">0</span>+</h2>
+            <p style="color:#94A3B8;">Happy Clients</p>
+        </div>
+        <div>
+            <h2 style="font-size:2.8rem; color:var(--success);"><span class="counter-val" data-target="5">0</span>+</h2>
+            <p style="color:#94A3B8;">Years Experience</p>
+        </div>
+        <div>
+            <h2 style="font-size:2.8rem; color:#F59E0B;"><span class="counter-val" data-target="99">0</span>%</h2>
+            <p style="color:#94A3B8;">Client Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section style="padding: 90px 0;">
+    <div class="container">
+        <div class="section-title">
+            <span class="badge badge-value">What We Offer</span>
+            <h2>Our Core Services</h2>
+            <p>Tailored digital solutions designed specifically for Bloggers, Schools, News Agencies, and Small Businesses.</p>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:30px;" class="grid-3">
+            <div class="glass-card">
+                <i class="fa-solid fa-newspaper" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
+                <h3>Blogger News Web (.in)</h3>
+                <p style="color:var(--text-muted); margin: 10px 0 15px;">Includes Custom .in Domain, Blogger Hosting, 5 Core Pages, SEO Optimization & Responsive Design.</p>
+                <div style="font-size:1.4rem; font-weight:700; color:var(--primary); margin-bottom:15px;">₹3,999</div>
+                <a href="services.html" class="btn btn-primary" style="width:100%;">Order Now</a>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-globe" style="font-size:2.5rem; color:var(--accent); margin-bottom:15px;"></i>
+                <h3>Blogger News Web (.com)</h3>
+                <p style="color:var(--text-muted); margin: 10px 0 15px;">Custom .com Domain, Premium Blogger News Template, High Speed, SEO-Ready Layout.</p>
+                <div style="font-size:1.4rem; font-weight:700; color:var(--primary); margin-bottom:15px;">₹4,999</div>
+                <a href="services.html" class="btn btn-accent" style="width:100%;">Order Now</a>
+            </div>
+            <div class="glass-card">
+                <i class="fa-solid fa-fire" style="font-size:2.5rem; color:#EF4444; margin-bottom:15px;"></i>
+                <h3>Firebase Firestore Site</h3>
+                <p style="color:var(--text-muted); margin: 10px 0 15px;">Dynamic database integration, Admin-friendly query management, .com Domain & Blogger Hosting.</p>
+                <div style="font-size:1.4rem; font-weight:700; color:var(--primary); margin-bottom:15px;">₹5,999</div>
+                <a href="services.html" class="btn btn-primary" style="width:100%;">Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Accordion -->
+<section style="padding: 80px 0; background:#FFF;">
+    <div class="container" style="max-width:800px;">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-item glass-card" style="margin-bottom:15px;">
+            <div class="faq-question" style="font-weight:700; cursor:pointer; display:flex; justify-content:space-between;">
+                <span>How long does development take?</span> <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer" style="margin-top:10px; color:var(--text-muted);">Standard Blogger websites take 2-4 working days. Android apps take 5-7 working days.</div>
+        </div>
+        <div class="faq-item glass-card" style="margin-bottom:15px;">
+            <div class="faq-question" style="font-weight:700; cursor:pointer; display:flex; justify-content:space-between;">
+                <span>Do you provide custom domain and hosting?</span> <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer" style="margin-top:10px; color:var(--text-muted);">Yes, all our plans include custom domain configuration and lifetime free Blogger web hosting!</div>
+        </div>
+    </div>
+</section>
+
+    
+<footer>
+    <div class="container">
+        <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:40px;" class="footer-grid">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom:15px; display:inline-block;">LiveSK<span>.in</span></a>
+                <p>LiveSK.in is a premier software and web development agency specializing in high-performance Blogger websites, Android apps, and real-time Firebase solutions.</p>
+            </div>
+            <div>
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#home" onclick="showPage('home')">Home</a></li>
-                    <li><a href="#about" onclick="showPage('about')">About Us</a></li>
-                    <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Legal Pages</h4>
+            <div>
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="#privacy" onclick="showPage('privacy')">Privacy Policy</a></li>
-                    <li><a href="#disclaimer" onclick="showPage('disclaimer')">Disclaimer</a></li>
-                    <li><a href="/ads.txt" target="_blank">ads.txt</a></li>
+                    <li><a href="services.html">Blogger News Sites</a></li>
+                    <li><a href="services.html">Static Web Portals</a></li>
+                    <li><a href="services.html">Firebase Firestore Apps</a></li>
+                    <li><a href="services.html">Android PDF Reader Apps</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal & Support</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 Livesk.in - All Rights Reserved. Contact: aworlditsolution@gmail.com
+        <div class="footer-bottom">
+            <p>&copy; 2026 LiveSK.in - All Rights Reserved. Email: aworlditsolution@gmail.com</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Simple JavaScript for Page Switching -->
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
+<div class="floating-btn-group">
+    <a href="https://wa.me/910000000000?text=Hello%20LiveSK.in,%20I%20want%20to%20discuss%20a%20project" target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="tel:+910000000000" class="float-btn float-call" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" id="backToTop" class="float-btn float-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
 
-            // Show selected page
-            const selectedPage = document.getElementById(pageId);
-            if(selectedPage) {
-                selectedPage.classList.add('active');
-            }
+<script src="script.js"></script>
 
-            // Scroll to top
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
 </body>
 </html>
