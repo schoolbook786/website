@@ -71,3 +71,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Firebase Config (Apna Firebase Project details paste karein)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
+
+// Initialize Firebase & Firestore
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Contact Form Submission Handler
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const btn = contactForm.querySelector('button[type="submit"]');
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+
+        const formData = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value,
+            createdAt: serverTimestamp()
+        };
+
+        try {
+            // Save data to "inquiries" collection
+            await addDoc(collection(db, "inquiries"), formData);
+            alert("Success! Your message has been sent successfully.");
+            contactForm.reset();
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert("Error sending message. Please try again.");
+        } finally {
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+            btn.disabled = false;
+        }
+    });
+}
