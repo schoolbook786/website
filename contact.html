@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SweetAlert2 CDN (Popup ke liye) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     
@@ -133,7 +137,8 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="+918080808099" required>
+                            <!-- Sirf 10-digit number entry allow karne ke liye logic -->
+                            <input type="tel" id="phone" class="form-control" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required>
                         </div>
                     </div>
 
@@ -214,7 +219,6 @@
     </div>
 </footer>
 
-<!-- Updated JS import as Module for Firebase -->
 <script type="module" src="script.js"></script>
 </body>
 </html>
