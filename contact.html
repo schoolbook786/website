@@ -220,5 +220,19 @@
 </footer>
 
 <script type="module" src="firebase.js"></script>
+    // Disable Right-Click
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+    document.addEventListener('keydown', (e) => {
+    // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U block karne ke liye
+    if (
+        e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+        (e.ctrlKey && e.key === 'u')
+    ) {
+        e.preventDefault();
+    }
+});
 </body>
 </html>
